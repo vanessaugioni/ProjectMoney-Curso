@@ -16,6 +16,14 @@
       "category": "Alimentação", 
       "price": "100", 
       "createsAt":"2023-05-31 -13:45:00"
+    },
+    {
+      "id": 3, 
+      "description": "Curso ignite", 
+      "type": "outcome", 
+      "category": "Estudos", 
+      "price": "200", 
+      "createsAt":"2023-05-20 -13:45:00"
     }
 
 

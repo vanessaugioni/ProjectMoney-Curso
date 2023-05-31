@@ -31,7 +31,6 @@ export function TransactionsProvider({children}: TransactionsProviderProps) {
       const data = await response.json(); 
 
       setTransactions(data); 
-        
     }
  
       useEffect(() => {
