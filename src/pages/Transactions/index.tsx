@@ -5,6 +5,7 @@ import { SearchForm } from "./components/SearchForm";
 
 import { PriceHighlight, TransactionsContainer, TransactionsTable } from "./styles";
 import { TransactionsContext } from "../../contexts/Transactions.Context";
+import { priceFormatter } from "../../utils/formatter";
 
 
 export function Transactions() {
@@ -27,7 +28,7 @@ export function Transactions() {
                         <td width="50%">{transactions.description}</td>
                         <td>
                           <PriceHighlight variant={transactions.type}>
-                              {transactions.price}
+                              {priceFormatter.format(transactions.price)}
                           </PriceHighlight>  
                         </td>
                         <td>{transactions.category}</td>
