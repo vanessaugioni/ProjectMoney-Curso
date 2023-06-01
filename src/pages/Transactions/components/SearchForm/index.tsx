@@ -16,8 +16,7 @@ type SearchFormInputs = z.infer<typeof searchFormShema>;
 export function SearchForm() {
     const { fetchTransactions} = useContext(TransactionsContext)
 
-    const { 
-        watch,
+    const {
         register, 
         handleSubmit,
         formState: { isSubmitting }
@@ -31,6 +30,8 @@ export function SearchForm() {
     await fetchTransactions(data.query)
 
     }
+
+
  
     return (
         <SearchFormContainer onSubmit={handleSubmit(handleSearchTransaction)}>
@@ -38,9 +39,10 @@ export function SearchForm() {
           type="text" 
           placeholder="Busque por transações" 
           {...register('query')}
+          onKeyDown={(event) => event.key === 'Enter' && isSubmitting && handleSearchTransaction}
         />
 
-        <button type="submit" disabled={!!!watch('query')}>
+        <button type="submit" disabled={isSubmitting}>
 
         <MagnifyingGlass size={20}/>
             Buscar
