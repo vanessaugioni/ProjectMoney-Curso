@@ -1,31 +1,36 @@
 {
   "transactions": [
     {
-
-        "id": 1, 
-        "description": "Desenvolvimento de site", 
-        "type": "income", 
-        "category": "Venda", 
-        "price": "14000", 
-        "createdAt":"2023-05-31 -13:33:40"
-    }, 
-    {
-      "id": 2, 
-      "description": "Pizza", 
-      "type": "outcome", 
-      "category": "Alimentação", 
-      "price": "100", 
-      "createdAt":"2023-05-31 -13:45:00"
+      "id": 1,
+      "description": "Desenvolvimento de site",
+      "type": "income",
+      "category": "Venda",
+      "price": "14000",
+      "createdAt": "2023-05-31 -13:33:40"
     },
     {
-      "id": 3, 
-      "description": "Curso ignite", 
-      "type": "outcome", 
-      "category": "Estudos", 
-      "price": "200", 
-      "createdAt":"2023-05-20 -13:45:00"
+      "id": 2,
+      "description": "Pizza",
+      "type": "outcome",
+      "category": "Alimentação",
+      "price": "100",
+      "createdAt": "2023-05-31 -13:45:00"
+    },
+    {
+      "id": 3,
+      "description": "Curso ignite",
+      "type": "outcome",
+      "category": "Estudos",
+      "price": "200",
+      "createdAt": "2023-05-20 -13:45:00"
+    },
+    {
+      "description": "Criação de post ",
+      "price": 5000,
+      "category": "venda",
+      "type": "income",
+      "createdAt": "2023-06-01T20:37:19.525Z",
+      "id": 4
     }
-
-
   ]
 }
