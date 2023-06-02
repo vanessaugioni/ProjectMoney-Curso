@@ -1,18 +1,21 @@
-import { useContext, useEffect } from "react";
-import { Header } from "../../components/Header";
-import { Summary } from "../../components/Summary";
-import { SearchForm } from "./components/SearchForm";
+import { Header } from '../../components/Header'
+import { Summary } from '../../components/Summary'
+import { SearchForm } from './components/SearchForm'
 
 import {
   PriceHighlight,
   TransactionsContainer,
   TransactionsTable,
-} from "./styles";
-import { TransactionsContext } from "../../contexts/Transactions.Context";
-import { dateFormatter, priceFormatter } from "../../utils/formatter";
+} from './styles'
+
+import { priceFormatter } from '../../utils/formatter'
+import { TransactionsContext } from '../../contexts/Transactions.Context'
+import { useContextSelector } from 'use-context-selector'
 
 export function Transactions() {
-  const { transactions } = useContext(TransactionsContext);
+  const transactions = useContextSelector(TransactionsContext, (context) => {
+    return context.transactions
+  })
 
   return (
     <div>
@@ -24,13 +27,13 @@ export function Transactions() {
 
         <TransactionsTable>
           <tbody>
-            {transactions.map((transactions) => {
+            {transactions?.map((transactions) => {
               return (
                 <tr key={transactions.id}>
                   <td width="50%">{transactions.description}</td>
                   <td>
                     <PriceHighlight variant={transactions.type}>
-                        {transactions.type == 'outcome' && '- '}
+                      {transactions.type === 'outcome' && '- '}
 
                       {priceFormatter.format(transactions.price)}
                     </PriceHighlight>
@@ -38,11 +41,11 @@ export function Transactions() {
                   <td>{transactions.category}</td>
                   <td>{transactions.createdAt}</td>
                 </tr>
-              );
+              )
             })}
           </tbody>
         </TransactionsTable>
       </TransactionsContainer>
     </div>
-  );
+  )
 }

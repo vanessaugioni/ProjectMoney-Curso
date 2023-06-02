@@ -31,6 +31,30 @@
       "type": "income",
       "createdAt": "2023-06-01T20:37:19.525Z",
       "id": 4
+    },
+    {
+      "description": "Pastel ",
+      "price": 5,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-06-02T11:35:32.999Z",
+      "id": 5
+    },
+    {
+      "description": "Banana",
+      "price": 3,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2023-06-02T12:11:31.071Z",
+      "id": 6
+    },
+    {
+      "description": "Teste ",
+      "price": 1000,
+      "category": "venda",
+      "type": "income",
+      "createdAt": "2023-06-02T14:45:30.488Z",
+      "id": 7
     }
   ]
 }
