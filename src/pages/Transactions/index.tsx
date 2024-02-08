@@ -28,9 +28,8 @@ export function Transactions() {
         <TransactionsTable>
           <tbody>
             {transactions?.map((transactions) => {
+              console.log(transactions)
 
-              console.log(transactions);
-              
               return (
                 <tr key={transactions.id}>
                   <td width="50%">{transactions.description}</td>
@@ -42,9 +41,10 @@ export function Transactions() {
                     </PriceHighlight>
                   </td>
                   <td>{transactions.category}</td>
-                  <td>{transactions.createdAt && formatDate(transactions.createdAt)}</td>
-
-            
+                  <td>
+                    {transactions.createdAt &&
+                      formatDate(transactions.createdAt)}
+                  </td>
                 </tr>
               )
             })}
